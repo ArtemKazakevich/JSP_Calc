@@ -15,9 +15,9 @@
     <button type="submit">Ввод</button>
 </form>
 
-<form action="calculation.jsp" method="post">
+<a href="${pageContext.request.contextPath}/calc" methods="post">
     <button type="submit">Авторизация</button>
-</form>
+</a>
 
 </body>
 </html>

@@ -21,13 +21,13 @@
     <button type="submit">Ввод</button>
 </form>
 
-<form action="${pageContext.request.contextPath}/personAccount" method="get">
+<a href="${pageContext.request.contextPath}/personAccount" methods="get">
     <button type="submit">Личный кабинет</button>
-</form>
+</a>
 
-<form action="calculation.jsp" method="post">
+<a href="${pageContext.request.contextPath}/calc" methods="post">
     <button type="submit">Калькулятор</button>
-</form>
+</a>
 
 </body>
 </html>

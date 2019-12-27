@@ -14,6 +14,8 @@ import java.util.List;
 public class RegServlet extends HttpServlet {
      
      protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+          request.setCharacterEncoding("UTF-8");
+          
           String name = request.getParameter("name");
           String login = request.getParameter("login");
           String age = request.getParameter("age");

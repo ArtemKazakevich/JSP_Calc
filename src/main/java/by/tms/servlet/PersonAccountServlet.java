@@ -11,6 +11,7 @@ import java.io.IOException;
 public class PersonAccountServlet extends HttpServlet {
      
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-          request.getRequestDispatcher("/personAccount.jsp").forward(request, response);
+//          request.getRequestDispatcher("/personAccount.jsp").forward(request, response);
+          response.sendRedirect("/personAccount.jsp");
      }
 }

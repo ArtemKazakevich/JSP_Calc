@@ -21,9 +21,9 @@
     <button type="submit">Ввод</button>
 </form>
 
-<form action="authentication.jsp" method="post">
+<a href="${pageContext.request.contextPath}/auth" methods="post">
     <button type="submit">Зарегестрироваться</button>
-</form>
+</a>
 
 </body>
 </html>

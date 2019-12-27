@@ -15,6 +15,8 @@ import java.util.List;
 public class AuthServlet extends HttpServlet {
      
      protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+          request.setCharacterEncoding("UTF-8");
+          
           String login = request.getParameter("login");
           String pass = request.getParameter("pass");
           
@@ -26,6 +28,10 @@ public class AuthServlet extends HttpServlet {
                if (user1.equals(user)) {
                     request.getSession().setAttribute("currentUser", user1);
                     request.getSession().setAttribute("history", new ArrayList<>());
+               }
+               else {
+                    request.setAttribute("flagOne", true);
+                    request.getRequestDispatcher("/errorUser.jsp").forward(request, response);
                }
           }
      

@@ -13,9 +13,10 @@
         </c:forEach>
     </ul>
 </div>
-<form action="calculation.jsp" method="post">
+
+<a href="${pageContext.request.contextPath}/calc" methods="post">
     <button type="submit">Калькулятор</button>
-</form>
+</a>
 
 </body>
 </html>

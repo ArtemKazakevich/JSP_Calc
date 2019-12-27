@@ -5,12 +5,13 @@
 </head>
 <body>
 
-<form action="authentication.jsp" method="post" >
+<a href="${pageContext.request.contextPath}/auth" methods="post">
     <button type="submit">Авторизация</button>
-</form>
-<form action=registration.jsp method="post" >
-    <button type="submit">Регистрация</button>
-</form>
+</a>
+
+<a href="${pageContext.request.contextPath}/reg" methods="post">
+    <button type="submit">Регстрация</button>
+</a>
 
 </body>
 </html>

@@ -13,6 +13,8 @@ import java.io.IOException;
 public class ChangeServlet extends HttpServlet {
      
      protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+          request.setCharacterEncoding("UTF-8");
+          
           String name = request.getParameter("name");
           String login = request.getParameter("login");
           String age = request.getParameter("age");
@@ -30,6 +32,7 @@ public class ChangeServlet extends HttpServlet {
      }
      
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-          request.getRequestDispatcher("/change.jsp").forward(request, response);
+//          request.getRequestDispatcher("/change.jsp").forward(request, response);
+          response.sendRedirect("/change.jsp");
      }
 }

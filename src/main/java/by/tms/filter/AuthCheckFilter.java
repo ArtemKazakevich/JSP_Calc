@@ -11,9 +11,11 @@ import java.io.IOException;
 public class AuthCheckFilter extends HttpFilter {
      
      public void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain) throws ServletException, IOException {
-          if (req.getSession().getAttribute("userList") == null)
-               req.getRequestDispatcher("/errorAuthUser.jsp").forward(req, resp);
-          else
+          if (req.getSession().getAttribute("userList") == null) {
+               req.setAttribute("flagThree", true);
+               req.getRequestDispatcher("/errorUser.jsp").forward(req, resp);
+          } else {
                chain.doFilter(req, resp);
+          }
      }
 }

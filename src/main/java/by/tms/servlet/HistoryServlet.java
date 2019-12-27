@@ -13,6 +13,7 @@ import java.util.List;
 public class HistoryServlet extends HttpServlet {
 
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-          request.getRequestDispatcher("/history.jsp").forward(request, response);
+//          request.getRequestDispatcher("/history.jsp").forward(request, response);
+          response.sendRedirect("/history.jsp");
      }
 }

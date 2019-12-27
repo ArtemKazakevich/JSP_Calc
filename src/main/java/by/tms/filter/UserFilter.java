@@ -12,9 +12,11 @@ public class UserFilter extends HttpFilter {
 
      @Override
      protected void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain) throws IOException, ServletException {
-          if (req.getSession().getAttribute("currentUser") == null)
+          if (req.getSession().getAttribute("currentUser") == null) {
+               req.setAttribute("flagTwo", true);
                req.getRequestDispatcher("/errorUser.jsp").forward(req, resp);
-          else
+          } else {
                chain.doFilter(req, resp);
+          }
      }
 }

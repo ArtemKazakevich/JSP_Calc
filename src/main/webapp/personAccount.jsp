@@ -11,13 +11,13 @@
     </p>
 </div>
 
-<form action="calculation.jsp" method="post">
+<a href="${pageContext.request.contextPath}/calc" methods="post">
     <button type="submit">Калькулятор</button>
-</form>
+</a>
 
-<form action="${pageContext.request.contextPath}/change" method="get">
+<a href="${pageContext.request.contextPath}/change" methods="get">
     <button type="submit">Редактирование данных</button>
-</form>
+</a>
 
 </body>
 </html>

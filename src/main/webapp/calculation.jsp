@@ -38,17 +38,17 @@
     </p>
 </div>
 
-<form action="${pageContext.request.contextPath}/history" method="get">
+<a href="${pageContext.request.contextPath}/history" methods="get">
     <button type="submit">История</button>
-</form>
+</a>
 
-<form action="${pageContext.request.contextPath}/personAccount" method="get">
+<a href="${pageContext.request.contextPath}/personAccount" methods="get">
     <button type="submit">Личный кабинет</button>
-</form>
+</a>
 
-<form action="${pageContext.request.contextPath}/logout" method="get">
+<a href="${pageContext.request.contextPath}/logout" methods="get">
     <button type="submit">Выход</button>
-</form>
+</a>
 
 </body>
 </html>
