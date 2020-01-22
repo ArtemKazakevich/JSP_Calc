@@ -52,7 +52,6 @@ public class CalcServlet extends HttpServlet {
           if (result != null) {
                req.setAttribute("result", result);
           }
-          req.getRequestDispatcher("/calculation.jsp").forward(req, resp); // если просто эта строчка
-          // result не выводится ?? мы же setAtribute в Poste выполняем
+          req.getRequestDispatcher("/calculation.jsp").forward(req, resp);
      }
 }
